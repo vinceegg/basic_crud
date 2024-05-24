@@ -3,6 +3,7 @@ import 'package:basic_crud/services/database.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:random_string/random_string.dart';
 
+
 class Student extends StatefulWidget {
   const Student({super.key});
 
