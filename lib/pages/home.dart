@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
 Stream? StudentsStream;
 
 getontheload()async{
-  StudentsStream= await DatabaseMethods().getStudentDetails();
+  StudentsStream= await DatabaseMethods().getStudentsDetails();
   setState(() {
   });
 
@@ -67,7 +67,7 @@ Widget allStudentsDetails() {
                       nameController.text=ds["Name"];
                       studentIDController.text=ds["StudentID"];
                       courseController.text=ds["Course"];
-                      EditStudentsDetails(ds.["Id"]);
+                      EditStudentsDetails(ds["Id"]);
                     },                
                     child: Icon(Icons.edit, color: Colors.blue)),
                     SizedBox(width: 5.0,),
@@ -95,7 +95,7 @@ Widget allStudentsDetails() {
                       ],
                     )    ),
             ),
-        )
+        );
       })
     : Container();      
   });

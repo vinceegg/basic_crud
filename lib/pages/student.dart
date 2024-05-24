@@ -117,7 +117,7 @@ class _StudentState extends State<Student> {
             Center(
               child: ElevatedButton(
                   onPressed: () async {
-                    String Id = RandomAlphaNumeric(10);
+                    String Id = randomAlphaNumeric(10);
                     Map<String, dynamic> stundentInfoMap = {
                       "Name": nameController.text,
                       "StudentID": studentIDController.text,
@@ -125,7 +125,7 @@ class _StudentState extends State<Student> {
                       "Course": courseController.text,
                     };
                     await DatabaseMethods()
-                        .addStudentDetails(stundentInfoMap, Id)
+                        .addStudentsDetails(stundentInfoMap, Id)
                         .then((value) {
                       Fluttertoast.showToast(
                           msg: "Student Added Successfully",
